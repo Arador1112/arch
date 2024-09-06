@@ -1,0 +1,35 @@
+
+//@theme "/usr/share/rofi/themes/solarized_alternate.rasi"
+
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+
+@theme "/usr/share/rofi/themes/solarized.rasi"
+@import "~/.cache/wal/colors-rofi-dark"
+
+
+configuration {
+    font:				"JetBrainsMono Nerd Font 11";
+    show-icons:				true;
+    icon-theme:				"Papirus-Dark";
+    display-drun:			"Apps";
+    drun-display-format:		"{name}";
+    scroll-method:			0;
+    disable-history:			false;
+    sidebar-mode:			false;
+    
+}
+
+
+
+window {
+    
+    background-color: @background;
+    border:           0;
+    padding:          0;
+    width: 25%;
+    height: 30%;
+}
+listview {
+    lines:                          10;
+    columns:                        1;
+}

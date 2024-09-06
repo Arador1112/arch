@@ -1,0 +1,57 @@
+@import "/home/arador/.cache/wal/colors-waybar.css";
+
+
+* {
+       font-family: JetBrainsMono Nerd Font;
+       font-size: 15px;
+}
+
+
+#waybar {
+  background: transparent;
+  color: @color0;
+
+}
+
+
+
+#workspaces {
+  border-radius: 0.5rem;
+
+  background-color: @color0;
+  margin-left: 1rem;
+}
+
+#workspaces button {
+  color: @color8;
+  border-radius: 0.5rem;
+  padding-right: 0.4rem;
+}
+
+#workspaces button.active {
+  color: @color8;
+  border-radius: 0.5rem;
+}
+
+#workspaces button:hover {
+  color: @color8;
+  border-radius: 0.5rem;
+}
+
+
+
+#custom-notification,#clock,#tray,#backlight,#cpu,#battery,#pulseaudio,#network,#power-profiles-daemon,#window{
+  background-color: @color0;
+  padding-right: 1rem;
+  padding-left:  1rem;
+  border-radius: 0.5rem;
+  color: @color8;
+}
+
+
+
+#tray{
+
+	margin-right: 1rem;
+}
+
