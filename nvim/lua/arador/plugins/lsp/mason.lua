@@ -37,6 +37,7 @@ return {
 				"google-java-format",
 				"clang-format",
 				"goimports",
+				"shfmt",
 			},
 		})
 	end,
