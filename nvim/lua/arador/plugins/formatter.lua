@@ -26,6 +26,7 @@ return {
 				go = { "goimports" },
 				rust = { "rustfmt" },
 				bash = { "shfmt" },
+				csharp = { "dotnet-format" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
