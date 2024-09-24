@@ -4,7 +4,7 @@ local o = vim.opt
 
 -- line numbers
 
-o.relativenumber = false
+o.relativenumber = true
 o.number = true
 
 -- tabs and indentation
@@ -72,3 +72,7 @@ vim.api.nvim_set_keymap(
 	":split | terminal<CR>:resize 30<CR>:startinsert<CR>",
 	{ noremap = true, silent = true }
 )
+
+o.fillchars:append({
+	vert = " ",
+})

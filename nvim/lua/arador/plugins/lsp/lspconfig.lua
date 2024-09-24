@@ -74,41 +74,6 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
-		-- Manual configuration for bacon_ls
-		lspconfig.bacon_ls.setup({
-			cmd = { "bacon-ls" },
-			filetypes = { "rust" },
-			root_dir = lspconfig.util.root_pattern("Cargo.toml", "rust-project.json"),
-			settings = {
-				locationsFile = ".bacon-locations",
-				waitTimeSeconds = 10,
-			},
-			single_file_support = true,
-		})
-
-		lspconfig.omnisharp.setup({
-			cmd = { "dotnet", "/home/arador/.dotnet/tools/omnisharp/OmniSharp.dll" },
-			filetypes = { "cs", "vb" },
-			root_dir = lspconfig.util.root_pattern("*.sln", "*.csproj", "omnisharp.json", "function.json"),
-
-			settings = {
-				FormattingOptions = {
-					EnableEditorConfigSupport = true,
-					OrganizeImports = nil,
-				},
-				MsBuild = {
-					LoadProjectsOnDemand = nil,
-				},
-				RoslynExtensionsOptions = {
-					EnableAnalyzersSupport = nil,
-					EnableImportCompletion = nil,
-					AnalyzeOpenDocumentsOnly = nil,
-				},
-				Sdk = {
-					IncludePrereleases = true,
-				},
-			},
-		})
 
 		mason_lspconfig.setup_handlers({
 			-- Default handler for installed servers

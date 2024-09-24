@@ -10,23 +10,24 @@ return {
 				typescript = { "prettier" },
 				javascriptreact = { "prettier" },
 				typescriptreact = { "prettier" },
-				svelte = { "prettier" },
+				
 				css = { "prettier" },
 				html = { "prettier" },
 				json = { "prettier" },
-				yaml = { "prettier" },
-				markdown = { "prettier" },
-				graphql = { "prettier" },
-				liquid = { "prettier" },
+				jsonc = { "prettier" },
+				
+				
+				
+				
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				java = { "google-java-format" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
-				go = { "goimports" },
-				rust = { "rustfmt" },
+				
+				
 				bash = { "shfmt" },
-				csharp = { "dotnet-format" },
+				
 			},
 			format_on_save = {
 				lsp_fallback = true,

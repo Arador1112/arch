@@ -10,7 +10,8 @@ return {
 
 		nvimtree.setup({
 			view = {
-				width = 35,
+
+				width = 30,
 				relativenumber = false,
 			},
 			-- change folder arrow icons
@@ -21,8 +22,8 @@ return {
 				icons = {
 					glyphs = {
 						folder = {
-							arrow_closed = "", -- arrow when folder is closed
-							arrow_open = "", -- arrow when folder is open
+							arrow_closed = "", -- arrow when folder is closed
+							arrow_open = "", -- arrow when folder is open
 						},
 					},
 				},
@@ -57,12 +58,5 @@ return {
 		) -- toggle file explorer on current file
 		keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
 		keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
-		keymap.set(
-			"n",
-			"<leader>et",
-			"<cmd>lua require('nvim-tree.api').tree.focus()<CR>",
-			{ desc = "Focus nvim-tree" }
-		)
-		keymap.set("n", "<leader>es", "<cmd>lua vim.cmd('wincmd p')<CR>", { desc = "Focus last window" })
 	end,
 }

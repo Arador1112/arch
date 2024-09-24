@@ -1,38 +1,30 @@
+-- Sonokai Theme
 return {
-
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		config = function()
-			require("catppuccin").setup({
-				flavour = "mocha",
-				-- Uncomment the line below to apply the colorscheme
-				--vim.cmd("colorscheme catppuccin-mocha"),
-			})
+	{ --   -- https://github.com/sainnhe/sonokai
+		"sainnhe/sonokai",
+		lazy = false, -- We want the colorscheme to load immediately when starting Neovim
+		priority = 1000, -- Load the colorscheme before other non-lazy-loaded plugins
+		config = function(_, opts)
+			vim.g.sonokai_style = "default" -- "default, atlantis, andromeda, shusia, maia, espresso"
+			--	vim.cmd("colorscheme sonokai") -- Replace this with your favorite colorscheme
 		end,
 	},
 
 	{
-		"rose-pine/neovim",
-		name = "rose-pine",
+		"shaunsingh/nord.nvim",
+		lazy = false,
 		priority = 1000,
 		config = function()
-			require("rose-pine").setup({
-				flavour = "main",
-				-- Uncomment the line below to apply the colorscheme
-				vim.cmd("colorscheme rose-pine"),
-			})
-		end,
-	},
+			-- Enable Nord colorscheme
+			vim.cmd("colorscheme nord")
 
-	{
-		"Mofiqul/dracula.nvim",
-		name = "dracula",
-		priority = 1000,
-		config = function()
-			-- Apply the colorscheme
-			--				vim.cmd("colorscheme dracula")
+			-- Set Nord-specific options
+			vim.g.nord_contrast = true
+			vim.g.nord_borders = false
+			vim.g.nord_disable_background = false
+			vim.g.nord_italic = true
+			vim.g.nord_uniform_diff_background = true
+			vim.g.nord_bold = true
 		end,
 	},
 }
